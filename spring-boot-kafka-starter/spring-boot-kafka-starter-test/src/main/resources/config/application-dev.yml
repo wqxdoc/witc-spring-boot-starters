@@ -1,0 +1,38 @@
+
+zhihui:
+  mq:
+    kafka:
+      producer:
+        # kafka服务器集群地址，多个broker以","分割
+        servers: 10.66.2.90:9099
+        # 消息生产时，key序列化策略。默认为StringSerializer。
+        # 如果序列化策略为StringSerializer，可不进行此配置
+        keySerializer: org.apache.kafka.common.serialization.StringSerializer
+        # 消息生产时，key序列化策略。默认为StringSerializer。
+        # 如果序列化策略为StringSerializer，可不进行此配置
+        valueSerializer: org.apache.kafka.common.serialization.StringSerializer
+        # producer发送消息确认策略。默认为1
+        # 0:不会等待来自服务器的应答。
+        # 1：只等待leader的应答，leader把消息写入日志文件后会发送一个确认
+        # all： 等待所有in-sync的副本应答
+        acks: all
+        # 发送消息失败，重试次数
+        # 0：禁止重试
+        retries: 0
+        # broker分区策略类（全限定名）
+        # 默认为DefaultPartitioner
+        partitionerClass: org.apache.kafka.clients.producer.internals.DefaultPartitioner
+      consumer:
+        # kafka服务器集群地址，多个broker以","分割
+        servers: 10.66.2.90:9099
+        # key 反序列化类 默认为StringDeserializer
+        keyDeserializer: org.apache.kafka.common.serialization.StringDeserializer
+        # value 反序列化类  默认为StringDeserializer
+        valueDeserializer: org.apache.kafka.common.serialization.StringDeserializer
+        # consumer 分组标识。默认为consumer_group
+        groupId: consumer_group
+        # consumer创建的线程数
+        consumerConcurrency: 2
+        # consumer订阅的topic
+        topics[0]: test_topic
+

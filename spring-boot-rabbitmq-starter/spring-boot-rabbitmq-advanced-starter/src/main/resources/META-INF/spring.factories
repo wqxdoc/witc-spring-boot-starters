@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.zhihui.sbs.commons.amqp.auto.configuration.RabbitMqAutoConfiguration

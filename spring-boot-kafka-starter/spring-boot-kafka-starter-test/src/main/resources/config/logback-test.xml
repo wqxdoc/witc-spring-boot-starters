@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    scan:
+        当此属性设置为true时，配置文件如果发生改变，将会被重新加载，默认值为true。
+    scanPeriod:
+        设置监测配置文件是否有修改的时间间隔，如果没有给出时间单位，默认单位是毫秒。当scan为true时，此属性生效。默认的时间间隔为1分钟。
+    debug:
+        当此属性设置为true时，将打印出logback内部日志信息，实时查看logback运行状态。默认值为false。
+-->
+<configuration scan="true" scanPeriod="30 seconds" debug="false">
+
+    <!-- 文件输出格式 -->
+    <!--
+        %highlight会将ERROR设为红色加粗，WARN设为红色，INFO设为蓝色，其余默认。
+        %cyan会将logger名称设为蓝绿色。
+    -->
+    <property name="PATTERN" value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) %highlight(%-5level) [%L] [%thread] %cyan(%logger{80}): %msg%n" />
+    <!-- 文件路径 -->
+
+    <property name="LOG_HOME" value="D://logback//" />
+
+    <!--
+        <property name="LOG_HOME" value="D:\\opt\\real-utils\\" />
+    -->
+    <property name="LOG.MAX.SIZE" value="100MB" /> <!-- 日志文件大小,超过这个大小将被压缩 -->
+
+    <!-- 记录异常日志 -->
+    <appender name="ERROR-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 文件路径 -->
+        <file>${LOG_HOME}/access.error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 文件名称 -->
+            <!-- 非当天的Log文件压缩备份为zip -->
+            <fileNamePattern>${LOG_HOME}/access.error.%d{yyyy-MM-dd}.%i.zip</fileNamePattern>
+            <!-- 文件输出日志 (文件大小策略进行文件输出，超过指定大小对文件备份) -->
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>${LOG.MAX.SIZE}</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <!-- 超过30天的备份文件会被删除 -->
+            <MaxHistory>360</MaxHistory>
+        </rollingPolicy>
+
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>${PATTERN}</pattern>
+        </layout>
+    </appender>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 开发环境 -->
+    <springProfile name="dev">
+        <!-- 每天产生一个文件 -->
+        <appender name="DEV-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <!-- 文件路径 -->
+            <file>${LOG_HOME}/access.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <!-- 文件名称 -->
+                <!-- 非当天的Log文件压缩备份为zip -->
+                <fileNamePattern>${LOG_HOME}/access.%d{yyyy-MM-dd}.%i.zip</fileNamePattern>
+                <!-- 文件输出日志 (文件大小策略进行文件输出，超过指定大小对文件备份) -->
+                <timeBasedFileNamingAndTriggeringPolicy
+                        class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                    <maxFileSize>${LOG.MAX.SIZE}</maxFileSize>
+                </timeBasedFileNamingAndTriggeringPolicy>
+                <!-- 超过30天的备份文件会被删除 -->
+                <MaxHistory>30</MaxHistory>
+            </rollingPolicy>
+
+            <layout class="ch.qos.logback.classic.PatternLayout">
+                <pattern>${PATTERN}</pattern>
+            </layout>
+        </appender>
+
+        <root level="info">
+            <appender-ref ref="CONSOLE" />
+            <appender-ref ref="DEV-FILE" />
+        </root>
+    </springProfile>
+
+</configuration>
