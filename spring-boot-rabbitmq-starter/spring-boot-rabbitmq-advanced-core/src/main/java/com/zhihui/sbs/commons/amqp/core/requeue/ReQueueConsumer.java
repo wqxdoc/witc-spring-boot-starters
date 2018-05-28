@@ -16,7 +16,7 @@
 
 package com.zhihui.sbs.commons.amqp.core.requeue;
 
-import com.zhihui.commons.amqp.core.requeue.policy.ReQueuePolicy;
+import com.zhihui.sbs.commons.amqp.core.requeue.policy.ReQueuePolicy;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;

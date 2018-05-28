@@ -16,8 +16,8 @@
 
 package com.zhihui.sbs.commons.amqp.core.recoverer;
 
-import com.zhihui.commons.amqp.core.config.RabbitConfig;
-import com.zhihui.commons.amqp.core.recoverer.handler.MessageExceptionHandler;
+import com.zhihui.sbs.commons.amqp.core.config.RabbitConfig;
+import com.zhihui.sbs.commons.amqp.core.recoverer.handler.MessageExceptionHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.exception.ExceptionUtils;
 import org.springframework.amqp.core.AmqpTemplate;

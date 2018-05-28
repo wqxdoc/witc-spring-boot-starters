@@ -16,7 +16,6 @@
 
 package com.zhihui.sbs.commons.amqp.core.requeue.policy.impl;
 
-import com.zhihui.commons.amqp.core.requeue.policy.ReQueuePolicy;
 import com.zhihui.sbs.commons.amqp.core.requeue.policy.ReQueuePolicy;
 import org.springframework.amqp.core.Message;
 import org.springframework.beans.factory.annotation.Value;

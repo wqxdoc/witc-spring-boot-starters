@@ -16,7 +16,7 @@
 
 package com.zhihui.sbs.commons.amqp.core.config;
 
-import com.zhihui.commons.amqp.core.exception.RabbitmqConfigurationException;
+import com.zhihui.sbs.commons.amqp.core.exception.RabbitmqConfigurationException;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Binding;

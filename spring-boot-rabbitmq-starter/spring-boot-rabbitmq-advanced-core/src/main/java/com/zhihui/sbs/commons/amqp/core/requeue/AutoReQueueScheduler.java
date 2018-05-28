@@ -16,8 +16,6 @@
 
 package com.zhihui.sbs.commons.amqp.core.requeue;
 
-import com.zhihui.commons.amqp.core.config.QueueConfig;
-import com.zhihui.commons.amqp.core.config.RabbitConfig;
 import com.zhihui.sbs.commons.amqp.core.config.QueueConfig;
 import com.zhihui.sbs.commons.amqp.core.config.RabbitConfig;
 import lombok.Data;
