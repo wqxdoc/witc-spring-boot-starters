@@ -16,16 +16,16 @@
 
 package com.zhihui.sbs.commons.amqp.auto.configuration;
 
-import com.zhihui.commons.amqp.core.config.RabbitConfig;
-import com.zhihui.commons.amqp.core.processor.CorrelationPostProcessor;
-import com.zhihui.commons.amqp.core.processor.DefaultCorrelationDataPostProcessor;
-import com.zhihui.commons.amqp.core.processor.DefaultCorrelationPostProcessor;
-import com.zhihui.commons.amqp.core.processor.InfoHeaderMessagePostProcessor;
-import com.zhihui.commons.amqp.core.recoverer.DeadLetterMessageRecoverer;
-import com.zhihui.commons.amqp.core.requeue.AutoReQueueScheduler;
-import com.zhihui.commons.amqp.core.requeue.ReQueueConsumer;
-import com.zhihui.commons.amqp.core.requeue.policy.ReQueuePolicy;
-import com.zhihui.commons.amqp.core.requeue.policy.impl.ThresholdReQueuePolicy;
+import com.zhihui.sbs.commons.amqp.core.config.RabbitConfig;
+import com.zhihui.sbs.commons.amqp.core.processor.CorrelationPostProcessor;
+import com.zhihui.sbs.commons.amqp.core.processor.DefaultCorrelationDataPostProcessor;
+import com.zhihui.sbs.commons.amqp.core.processor.DefaultCorrelationPostProcessor;
+import com.zhihui.sbs.commons.amqp.core.processor.InfoHeaderMessagePostProcessor;
+import com.zhihui.sbs.commons.amqp.core.recoverer.DeadLetterMessageRecoverer;
+import com.zhihui.sbs.commons.amqp.core.requeue.AutoReQueueScheduler;
+import com.zhihui.sbs.commons.amqp.core.requeue.ReQueueConsumer;
+import com.zhihui.sbs.commons.amqp.core.requeue.policy.ReQueuePolicy;
+import com.zhihui.sbs.commons.amqp.core.requeue.policy.impl.ThresholdReQueuePolicy;
 import org.springframework.amqp.core.MessagePostProcessor;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.CorrelationDataPostProcessor;

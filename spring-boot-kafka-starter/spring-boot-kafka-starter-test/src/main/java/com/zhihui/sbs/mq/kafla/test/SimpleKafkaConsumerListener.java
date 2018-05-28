@@ -1,6 +1,5 @@
 package com.zhihui.sbs.mq.kafla.test;
 
-import com.zhihui.mq.kafka.listener.IKafkaConsumerListener;
 import com.zhihui.sbs.mq.kafka.listener.IKafkaConsumerListener;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;

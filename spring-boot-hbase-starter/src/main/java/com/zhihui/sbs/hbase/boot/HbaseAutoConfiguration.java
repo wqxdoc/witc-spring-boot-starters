@@ -1,6 +1,6 @@
 package com.zhihui.sbs.hbase.boot;
 
-import com.zhihui.spring.boot.starter.hbase.api.HbaseTemplate;
+import com.zhihui.sbs.hbase.api.HbaseTemplate;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;

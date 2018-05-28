@@ -16,7 +16,7 @@
 
 package com.zhihui.sbs.commons.amqp.auto.configuration;
 
-import com.zhihui.commons.amqp.core.config.*;
+import com.zhihui.sbs.commons.amqp.core.config.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

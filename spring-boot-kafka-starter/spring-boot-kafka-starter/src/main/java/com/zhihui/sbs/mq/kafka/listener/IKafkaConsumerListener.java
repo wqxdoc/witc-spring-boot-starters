@@ -1,6 +1,5 @@
 package com.zhihui.sbs.mq.kafka.listener;
 
-import com.zhihui.mq.kafka.consumer.ConsumerAutoConfiguration;
 import com.zhihui.sbs.mq.kafka.consumer.ConsumerAutoConfiguration;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.kafka.KafkaException;

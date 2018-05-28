@@ -16,7 +16,7 @@
 
 package com.zhihui.sbs.commons.amqp.core.requeue;
 
-import com.zhihui.commons.amqp.core.config.*;
+import com.zhihui.sbs.commons.amqp.core.config.*;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

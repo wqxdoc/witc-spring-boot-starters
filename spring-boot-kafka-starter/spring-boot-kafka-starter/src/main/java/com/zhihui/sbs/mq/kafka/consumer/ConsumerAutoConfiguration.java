@@ -1,7 +1,5 @@
 package com.zhihui.sbs.mq.kafka.consumer;
 
-import com.zhihui.mq.kafka.config.ConsumerProperties;
-import com.zhihui.mq.kafka.constants.KafkaConsumerConstants;
 import com.zhihui.sbs.mq.kafka.config.ConsumerProperties;
 import com.zhihui.sbs.mq.kafka.constants.KafkaConsumerConstants;
 import org.apache.commons.lang3.StringUtils;
@@ -20,6 +18,7 @@ import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.listener.ConcurrentMessageListenerContainer;
 import org.springframework.util.CollectionUtils;
+
 import java.util.HashMap;
 import java.util.Map;
 

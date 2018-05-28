@@ -16,16 +16,13 @@
 
 package com.zhihui.sbs.commons.amqp.core;
 
-import com.zhihui.commons.amqp.core.config.RabbitConfig;
-import com.zhihui.commons.amqp.core.recoverer.DeadLetterMessageRecoverer;
-import com.zhihui.commons.amqp.core.recoverer.handler.MessageExceptionHandler;
-import com.zhihui.commons.amqp.core.recoverer.handler.impl.LogMessageExceptionHandler;
-import com.zhihui.commons.amqp.core.requeue.AutoReQueueScheduler;
-import com.zhihui.commons.amqp.core.requeue.ReQueueConsumer;
-import com.zhihui.commons.amqp.core.requeue.policy.impl.ThresholdReQueuePolicy;
+import com.zhihui.sbs.commons.amqp.core.config.RabbitConfig;
 import com.zhihui.sbs.commons.amqp.core.recoverer.DeadLetterMessageRecoverer;
 import com.zhihui.sbs.commons.amqp.core.recoverer.handler.MessageExceptionHandler;
 import com.zhihui.sbs.commons.amqp.core.recoverer.handler.impl.LogMessageExceptionHandler;
+import com.zhihui.sbs.commons.amqp.core.requeue.AutoReQueueScheduler;
+import com.zhihui.sbs.commons.amqp.core.requeue.ReQueueConsumer;
+import com.zhihui.sbs.commons.amqp.core.requeue.policy.impl.ThresholdReQueuePolicy;
 import org.mockito.Mockito;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.retry.MessageRecoverer;

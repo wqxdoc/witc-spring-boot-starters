@@ -1,6 +1,5 @@
 package com.zhihui.sbs.mq.kafka.listener;
 
-import com.zhihui.mq.kafka.config.ConsumerProperties;
 import com.zhihui.sbs.mq.kafka.config.ConsumerProperties;
 import javassist.ClassPool;
 import javassist.CtClass;

@@ -17,7 +17,7 @@
 package com.zhihui.sbs.commons.amqp.core.config;
 
 
-import com.zhihui.commons.amqp.core.exception.RabbitmqConfigurationException;
+import com.zhihui.sbs.commons.amqp.core.exception.RabbitmqConfigurationException;
 import org.junit.Rule;
 import org.junit.Test;
 import org.springframework.amqp.core.Binding;

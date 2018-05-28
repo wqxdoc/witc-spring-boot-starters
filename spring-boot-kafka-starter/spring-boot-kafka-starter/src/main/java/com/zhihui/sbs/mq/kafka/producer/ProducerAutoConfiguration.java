@@ -1,7 +1,7 @@
 package com.zhihui.sbs.mq.kafka.producer;
 
-import com.zhihui.mq.kafka.config.ProducerProperties;
-import com.zhihui.mq.kafka.constants.KafkaProducerConstants;
+import com.zhihui.sbs.mq.kafka.config.ProducerProperties;
+import com.zhihui.sbs.mq.kafka.constants.KafkaProducerConstants;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -14,6 +14,7 @@ import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
+
 import java.util.HashMap;
 import java.util.Map;
 
