@@ -1,4 +1,4 @@
-package com.witc.fastdfs.test;
+package com.zhihui.fastdfs.test;
 
 import java.io.BufferedOutputStream;
 import java.io.File;

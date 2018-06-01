@@ -1,4 +1,4 @@
-package com.witc.fastdfs.config;
+package com.zhihui.fastdfs.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

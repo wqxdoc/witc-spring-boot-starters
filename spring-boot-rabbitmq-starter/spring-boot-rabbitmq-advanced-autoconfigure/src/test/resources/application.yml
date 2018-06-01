@@ -41,14 +41,14 @@ rabbitmq:
       exchange-two:
         name: my-amqp-app-exchange-two-${user.name}
       exchange-mock:
-        name: my-amqp-app-exchange-mock-${user.name}
+        name: my-amqp-app-exchange-message-${user.name}
     queues:
       queue-one:
         name: my-amqp-app-queue-one-${user.name}
       queue-two:
         name: my-amqp-app-queue-two-${user.name}
       queue-mock:
-        name: my-amqp-app-queue-mock-${user.name}
+        name: my-amqp-app-queue-message-${user.name}
         dead-letter-enabled: false
     bindings:
       binding-one:
@@ -60,6 +60,6 @@ rabbitmq:
         queue: queue-two
         routing-key: rkey-two
       binding-mock:
-        exchange: exchange-mock
-        queue: queue-mock
-        routing-key: rkey-mock
+        exchange: exchange-message
+        queue: queue-message
+        routing-key: rkey-message

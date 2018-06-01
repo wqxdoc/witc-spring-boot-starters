@@ -1,4 +1,4 @@
-package com.witc.fastdfs.config;
+package com.zhihui.fastdfs.config;
 
 import java.util.ArrayList;
 import java.util.List;

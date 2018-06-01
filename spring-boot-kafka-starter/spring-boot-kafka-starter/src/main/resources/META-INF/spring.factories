@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.zhihui.sbs.mq.kafka.consumer.ConsumerAutoConfiguration,com.zhihui.mq.kafka.producer.ProducerAutoConfiguration,com.zhihui.mq.kafka.listener.ListenerAutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.zhihui.sbs.mq.kafka.consumer.ConsumerAutoConfiguration,com.zhihui.sbs.mq.kafka.producer.ProducerAutoConfiguration,com.zhihui.sbs.mq.kafka.listener.ListenerAutoConfiguration

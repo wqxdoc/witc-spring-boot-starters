@@ -97,7 +97,7 @@ rabbitmq:
     #Dead Letter Configuration to configure dead letter exchange and queue postfix.
     dead-letter-config:
       dead-letter-exchange:
-        name: my-app-dead-letter-exchange-${user.name}
+        name: my-app-dead-letter-exchange-${equipment.name}
         auto-delete: true
         durable: false
       queue-postfix: .dlq
@@ -106,28 +106,28 @@ rabbitmq:
     re-queue-config:
       enabled: true
       exchange:
-        name: re-queue-exchange-${user.name}
+        name: re-queue-exchange-${equipment.name}
       queue:
-        name: re-queue-queue-${user.name}
+        name: re-queue-queue-${equipment.name}
       routing-key: requeue.key
           
     #You can configure all your exchanges here  
     exchanges:
       exchange-one:
-        name: exchange-one-${user.name}
+        name: exchange-one-${equipment.name}
       exchange-two:
-        name: exchange-two-${user.name}
+        name: exchange-two-${equipment.name}
       exchange-mock:
-        name: exchange-mock-${user.name}
+        name: exchange-mock-${equipment.name}
     
     #You can configure all your queue here
     queues:
       queue-one:
-        name: queue-one-${user.name}
+        name: queue-one-${equipment.name}
       queue-two:
-        name: queue-two-${user.name}
+        name: queue-two-${equipment.name}
       queue-mock:
-        name: queue-mock-${user.name}
+        name: queue-mock-${equipment.name}
         dead-letter-enabled: false
     
     #You can configure your bindings for the exchanges and queues here    
@@ -244,7 +244,7 @@ rabbitmq:
     #Dead Letter Configuration to configure dead letter exchange and queue postfix.
     dead-letter-config:
       dead-letter-exchange:
-        name: my-app-dead-letter-exchange-amqp-test-${user.name}
+        name: config
         auto-delete: true
         durable: false
       queue-postfix: .dlq
@@ -299,9 +299,9 @@ rabbitmq:
     re-queue-config:
       enabled: true
       exchange:
-        name: re-queue-exchange-${user.name}
+        name: re-queue-exchange-${equipment.name}
       queue:
-        name: re-queue-queue-${user.name}
+        name: re-queue-queue-${equipment.name}
       routing-key: requeue.key
   . . .               
 ```
@@ -334,11 +334,11 @@ rabbitmq:
     #You can configure all your exchanges here  
     exchanges:
       exchange-one:
-        name: exchange-one-${user.name}
+        name: equipment
       exchange-two:
-        name: exchange-two-${user.name}
+        name: equipment
       exchange-mock:
-        name: exchange-mock-${user.name}
+        name: message
   . . .                 
 ```
 
@@ -377,11 +377,11 @@ rabbitmq:
     #You can configure all your queue here
     queues:
       queue-one:
-        name: queue-one-${user.name}
+        name: queue-one-${equipment.name}
       queue-two:
-        name: queue-two-${user.name}
+        name: queue-two-${equipment.name}
       queue-mock:
-        name: queue-mock-${user.name}
+        name: queue-mock-${equipment.name}
         dead-letter-enabled: false
   . . .                 
 ```
@@ -447,7 +447,7 @@ rabbitmq:
     #Dead Letter Configuration to configure dead letter exchange and queue postfix.
     dead-letter-config:
       dead-letter-exchange:
-        name: my-app-dead-letter-exchange-amqp-test-${user.name}
+        name: my-app-dead-letter-exchange-amqp-test-${equipment.name}
         auto-delete: true
         durable: false
       queue-postfix: .dlq
