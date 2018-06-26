@@ -1,10 +1,9 @@
 server:
   port: 8080
-paascloud:
-  job:
-    zookeeper:
-      server-lists: paascloud-provider-zk:2181
-      namespace: elastic-job-lite-demo
+elaticjob:
+  zookeeper:
+    server-lists: paascloud-provider-zk:2181
+    namespace: elastic-job-lite-demo
 spring:
   application:
     name: @pom.artifactId@

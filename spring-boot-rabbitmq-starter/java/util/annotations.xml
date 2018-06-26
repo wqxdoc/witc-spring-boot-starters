@@ -1,4 +1,7 @@
 <root>
+    <item name='java.util.List'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
     <item name='java.util.ServiceLoader'>
         <annotation name='java.lang.Deprecated'/>
     </item>

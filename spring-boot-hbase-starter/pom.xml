@@ -12,24 +12,37 @@
     <description>starter for hbase</description>
 
     <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
 
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <version.java>1.8</version.java>
-        <version.spring-boot>1.5.6.RELEASE</version.spring-boot>
-    </properties>
+	<scm>
+		<url>http://spring4all.com</url>
+		<connection>git@github.com:SpringForAll/spring-boot-starter-hbase.git</connection>
+		<developerConnection>https://github.com/SpringForAll/spring-boot-starter-hbase</developerConnection>
+	</scm>
+
+	<developers>
+		<developer>
+			<name>JThink</name>
+			<organization>http://spring4all.com</organization>
+		</developer>
+	</developers>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<version.java>1.8</version.java>
+		<version.spring-boot>1.5.6.RELEASE</version.spring-boot>
+	</properties>
 
     <dependencies>
         <dependency>
@@ -54,6 +67,10 @@
                     <groupId>javax.servlet</groupId>
                     <artifactId>servlet-api</artifactId>
                 </exclusion>
+                <exclusion>
+                	<artifactId>jdk.tools</artifactId>
+                	<groupId>jdk.tools</groupId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
@@ -76,31 +93,38 @@
         </dependencies>
     </dependencyManagement>
 
-    <distributionManagement>
+	<repositories>
         <repository>
-            <id>maven-releases</id>
-            <url>http://192.168.1.217:8081/repository/maven-releases/</url>
+            <id>cloudera repository</id>
+            <url>https://repository.cloudera.com/artifactory/cloudera-repos</url>
         </repository>
-        <snapshotRepository>
-            <id>maven-snapshots</id>
-            <url>http://192.168.1.217:8081/repository/maven-snapshots/</url>
-            <uniqueVersion>true</uniqueVersion>
-        </snapshotRepository>
-    </distributionManagement>
+    </repositories>
+    
+	<distributionManagement>
+		<repository>
+			<id>maven-releases</id>
+			<url>http://192.168.1.217:8081/repository/maven-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>maven-snapshots</id>
+			<url>http://192.168.1.217:8081/repository/maven-snapshots/</url>
+			<uniqueVersion>true</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
-                <configuration>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                    <source>${version.java}</source>
-                    <target>${version.java}</target>
-                    <showWarnings>true</showWarnings>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<source>${version.java}</source>
+					<target>${version.java}</target>
+					<showWarnings>true</showWarnings>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
